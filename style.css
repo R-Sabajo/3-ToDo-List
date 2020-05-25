@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  margin-left: 40px;
+  font-size: 2em;
+}
+
+header h2 {
+  display: inline-block;
+  color: cornflowerblue;
+}
+
+header p {
+  display: inline-block;
+  font-size: 0.6em;
+  color: rgb(255, 0, 0);
+  font-weight: 600;
+}
+
+#newTaskField {
+  border: 1px solid lightgray;
+  padding: 10px 15px;
+  border-radius: 20px;
+  outline: none;
+  width: 300px;
+}
+
+#newTaskField::placeholder {
+  color: lightgray;
+}
+
+#newTaskField:focus {
+  box-shadow: 0px 0px 2px cornflowerblue;
+}
+
+nav {
+  margin-left: 45px;
+  margin-bottom: 30px;
+  width: 490px;
+}
+
+nav button {
+  border: 1px solid grey;
+  background-color: cornflowerblue;
+  box-shadow: 0px 0px 4px cornflowerblue;
+  outline: none;
+  font-size: 1em;
+  font-weight: 500;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-left: 45px;
+  float: right;
+  width: 80px;
+  height: 38px;
+  text-align: center;
+}
+
+nav button:hover {
+  border: 1px solid grey;
+  background-color: white;
+  color: cornflowerblue;
+  font-weight: 600;
+  box-shadow: 0px 0px 4px cornflowerblue;
+  transition: all ease-in-out 150ms;
+}
+
+nav button:focus {
+  border: 1px solid lightgray;
+  background-color: rgb(245, 245, 245);
+  font-weight: 600;
+  color: cornflowerblue;
+  box-shadow: none;
+  transition: all ease-in-out 100ms;
+}
+
+main {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#taskList {
+  width: 500px;
+  list-style-type: none;
+}
+
+#taskList li {
+  border: 1px solid lightgray;
+  margin: 10px 0px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 3px 4px lightgray;
+}
+
+#taskList img {
+  float: right;
+}
+
+#taskList img:hover {
+  transform: scale(1.5) rotate(5deg);
+  transition: all ease-in-out 150ms;
+}
+
+#taskList input {
+  float: left;
+  margin-right: 10px;
+}
