@@ -1,4 +1,3 @@
-const body = document.getElementsByTagName('body');
 const taskList = document.getElementById('taskList');
 const addField = document.getElementById('newTaskField');
 const addButton = document.getElementById('newTaskAdd');
@@ -58,10 +57,3 @@ addButton.addEventListener('click', async event => {
   addField.value = '';
   allTaskItems(getTasks());
 });
-
-/*
-1. Functie schrijven die de taken dmv een DELETE weer uit de takenlijst verwijderd. gebruik hier een functie die de event target value als argument gebruikt.
-
-2. Functie maken die een nieuwe task kan aanmaken dmv de Add knop. met een POST actie die deze tekst als als description mee stuurt en met als done: false. Hier een refresh actie zodat het meteen te zien is in de DOM
-
-*/

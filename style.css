@@ -82,16 +82,24 @@ main {
 }
 
 #taskList {
-  width: 500px;
+  width: 80%;
   list-style-type: none;
 }
 
 #taskList li {
-  border: 1px solid lightgray;
+  border: 0.5px solid lightgray;
   margin: 10px 0px;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 1px 3px 4px lightgray;
+  text-shadow: 1px 1px 8px white;
+}
+
+li:nth-child(odd) {
+  background: rgba(255, 192, 203, 0.397);
+}
+li:nth-child(even) {
+  background: lightyellow;
 }
 
 #taskList img {
@@ -106,4 +114,9 @@ main {
 #taskList input {
   float: left;
   margin-right: 10px;
+}
+
+input checkbox:checked {
+  color: blue;
+  background-color: red;
 }
