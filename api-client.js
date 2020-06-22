@@ -31,7 +31,7 @@ const postTask = async (task, done) => {
         }),
       }
     );
-    location.reload();
+
     return res;
   } catch (err) {
     console.log(err);
@@ -66,7 +66,7 @@ const putTask = async (task, description, done) => {
         }),
       }
     );
-    location.reload();
+
     return res;
   } catch (err) {
     console.log(err);

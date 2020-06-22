@@ -27,9 +27,13 @@ const addTaskToDOM = task => {
 
   newCheckbox.addEventListener('change', event => {
     if (task.done === 'true') {
-      putTask(event.target.value, `${task.description}`, 'false');
+      putTask(event.target.value, `${task.description}`, 'false').then(() =>
+        allTaskItems(getTasks())
+      );
     } else {
-      putTask(event.target.value, `${task.description}`, 'true');
+      putTask(event.target.value, `${task.description}`, 'true').then(() =>
+        allTaskItems(getTasks())
+      );
     }
   });
 };
@@ -46,14 +50,14 @@ allTaskItems(getTasks());
 
 addField.addEventListener('keydown', async event => {
   if (event.keyCode === 13) {
-    postTask(`${event.target.value}`, 'false');
+    postTask(`${event.target.value}`, 'false').then(() =>
+      allTaskItems(getTasks())
+    );
     addField.value = '';
-    allTaskItems(getTasks());
   }
 });
 
 addButton.addEventListener('click', async event => {
-  postTask(`${addField.value}`, 'false');
+  postTask(`${addField.value}`, 'false').then(() => allTaskItems(getTasks()));
   addField.value = '';
-  allTaskItems(getTasks());
 });
