@@ -7,13 +7,17 @@ const addTaskToDOM = task => {
   let newCheckbox = document.createElement('input');
   newCheckbox.setAttribute('type', 'checkbox');
   newCheckbox.setAttribute(`value`, `${task.id}`);
+  let newTaskDescription = document.createElement('p');
+  newTaskDescription.innerHTML = `${task.description}`;
+  console.log(newTaskDescription);
   if (task.done === 'true') {
     newCheckbox.setAttribute('checked', 'checked');
-    newLi.innerHTML = `<del>${task.description}</del>`;
+    newTaskDescription.innerHTML = `<del>${task.description}</del>`;
   } else {
-    newLi.innerHTML = `${task.description}`;
+    newTaskDescription.innerHTML = `${task.description}`;
   }
   newLi.appendChild(newCheckbox);
+  newLi.appendChild(newTaskDescription);
   taskList.appendChild(newLi);
   let newImg = document.createElement('img');
   newLi.appendChild(newImg);

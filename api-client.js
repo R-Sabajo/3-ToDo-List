@@ -39,7 +39,6 @@ const deleteTask = async task => {
   try {
     const res = await fetch(`${apiUrl}/${task}.json`, { method: 'DELETE' });
     const data = await res.json();
-    console.log(data);
   } catch (err) {
     console.log(err);
   }

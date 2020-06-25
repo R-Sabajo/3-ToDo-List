@@ -10,6 +10,7 @@ header {
 header h2 {
   display: inline-block;
   color: cornflowerblue;
+  text-shadow: 1px 1px 3px grey;
 }
 
 header p {
@@ -17,6 +18,7 @@ header p {
   font-size: 0.6em;
   color: rgb(255, 0, 0);
   font-weight: 600;
+  text-shadow: 0.4px 0.4px 1.5px grey;
 }
 
 #newTaskField {
@@ -82,14 +84,18 @@ main {
 }
 
 #taskList {
-  width: 80%;
+  width: 90%;
   list-style-type: none;
 }
 
 #taskList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border: 0.5px solid lightgray;
   margin: 10px 0px;
   padding: 10px;
+  height: 20px;
   border-radius: 5px;
   box-shadow: 1px 3px 4px lightgray;
   text-shadow: 1px 1px 8px white;
@@ -102,21 +108,11 @@ li:nth-child(even) {
   background: lightyellow;
 }
 
-#taskList img {
-  float: right;
-}
-
 #taskList img:hover {
   transform: scale(1.5) rotate(5deg);
   transition: all ease-in-out 150ms;
 }
 
 #taskList input {
-  float: left;
   margin-right: 10px;
-}
-
-input checkbox:checked {
-  color: blue;
-  background-color: red;
 }
