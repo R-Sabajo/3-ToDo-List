@@ -22,7 +22,6 @@ const addTaskToDOM = task => {
   }
 
   const newImg = document.createElement('img');
-
   newImg.src = `./trash-delete-icon.jpg`;
   newImg.value = task.id;
   newImg.width = `20`;
